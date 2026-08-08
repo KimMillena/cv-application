@@ -1,4 +1,4 @@
-function ResumeSection({ personalDetails }) {
+function ResumeSection({ personalDetails, educationDetails }) {
     return (
         <>
             <h1>Resume</h1>
@@ -7,6 +7,11 @@ function ResumeSection({ personalDetails }) {
             <p>{personalDetails.email}</p>
             <p>{personalDetails.phoneNumber}</p>
             <p>{personalDetails.address}</p>
+
+            <p>{educationDetails.school}</p>
+            <p>{educationDetails.degree}</p>
+            <p>{educationDetails.startDate}</p>
+            <p>{educationDetails.endDate}</p>
         </>
     );
 }
