@@ -1,15 +1,4 @@
-function PersonalDetailsForm({
-    firstName,
-    handleFirstNameInput,
-    lastName,
-    handleLastNameInput,
-    email,
-    handleEmailInput,
-    phoneNumber,
-    handlePhoneNumberInput,
-    address,
-    handleAddressInput,
-}) {
+function PersonalDetailsForm({ personalDetails, onChange }) {
     return (
         <form className="personal-details-form">
             <div>
@@ -17,9 +6,9 @@ function PersonalDetailsForm({
                 <input 
                     type="text" 
                     id="first-name"
-                    name="first-name"
-                    value={firstName}
-                    onChange={(e) => handleFirstNameInput(e)}
+                    name="firstName"
+                    value={personalDetails.firstName}
+                    onChange={(e) => onChange(e)}
                 />
             </div>
             <div>
@@ -27,9 +16,9 @@ function PersonalDetailsForm({
                 <input 
                     type="text"
                     id="last-name"
-                    name="last-name"
-                    value={lastName}
-                    onChange={(e) => handleLastNameInput(e)}
+                    name="lastName"
+                    value={personalDetails.lastName}
+                    onChange={(e) => onChange(e)}
                 />
             </div>
             <div>
@@ -38,8 +27,8 @@ function PersonalDetailsForm({
                     type="email"
                     id="email"
                     name="email"
-                    value={email}
-                    onChange={(e) => handleEmailInput(e)}
+                    value={personalDetails.email}
+                    onChange={(e) => onChange(e)}
                 />
             </div>
             <div>
@@ -47,9 +36,9 @@ function PersonalDetailsForm({
                 <input 
                     type="tel"
                     id="phone-number"
-                    name="phone-number"
-                    value={phoneNumber}
-                    onChange={(e) => handlePhoneNumberInput(e)}
+                    name="phoneNumber"
+                    value={personalDetails.phoneNumber}
+                    onChange={(e) => onChange(e)}
                 />
             </div>
             <div>
@@ -58,8 +47,8 @@ function PersonalDetailsForm({
                     type="text"
                     id="address"
                     name="address"
-                    value={address}
-                    onChange={(e) => handleAddressInput(e)}
+                    value={personalDetails.address}
+                    onChange={(e) => onChange(e)}
                 />
             </div>
         </form>

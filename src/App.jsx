@@ -4,53 +4,33 @@ import ResumeSection from './components/resume-section/ResumeSection';
 import './styles/App.css';
 
 function App() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [address, setAddress] = useState('');
-  
-  const handleFirstNameInput = (e) => {
-    setFirstName(e.target.value);
-  }
+  const [personalDetails, setPersonalDetails] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phoneNumber: '',
+    address: '',
+  });
 
-  const handleLastNameInput = (e) => {
-    setLastName(e.target.value);
-  }
+  const handlePersonalDetailsChange = (e) => {
+    const inputName = e.target.name;
+    const inputValue = e.target.value;
 
-  const handleEmailInput = (e) => {
-    setEmail(e.target.value);
-  }
-
-  const handlePhoneNumberInput = (e) => {
-    setPhoneNumber(e.target.value);
-  }
-
-  const handleAddressInput = (e) => {
-    setAddress(e.target.value);
-  }
+    setPersonalDetails({
+      ...personalDetails,
+      [inputName]: inputValue,
+    })
+  };
 
   return (
     <>
       <h1>CV Application</h1>
       <PersonalDetailsSection 
-        firstName={firstName}
-        handleFirstNameInput={handleFirstNameInput}
-        lastName={lastName}
-        handleLastNameInput={handleLastNameInput}
-        email={email}
-        handleEmailInput={handleEmailInput}
-        phoneNumber={phoneNumber}
-        handlePhoneNumberInput={handlePhoneNumberInput}
-        address={address}
-        handleAddressInput={handleAddressInput}
+        personalDetails={personalDetails}
+        onChange={handlePersonalDetailsChange}
       />
       <ResumeSection 
-        firstName={firstName}
-        lastName={lastName}
-        email={email}
-        phoneNumber={phoneNumber}
-        address={address}
+        personalDetails={personalDetails}
       />
     </>
   )
