@@ -13,12 +13,9 @@ function App() {
     address: '',
   });
 
-  const [educationDetails, setEducationDetails] = useState({
-    school: '',
-    degree: '',
-    startDate: '',
-    endDate: '',
-  })
+  const [educationList, setEducationList] = useState([
+    { id: crypto.randomUUID(), school: '', degree: '', startDate: '', endDate: '' },
+  ]);
 
   const handlePersonalDetailsChange = (e) => {
     const inputName = e.target.name;
@@ -30,15 +27,40 @@ function App() {
     })
   };
 
-  const handleEducationDetailsChange = (e) => {
+  const handleEducationDetailsChange = (e, id) => {
     const inputName = e.target.name;
     const inputValue = e.target.value;
 
-    setEducationDetails({
-      ...educationDetails,
-      [inputName]: inputValue,
+    const changedEducation = educationList.map(education => {
+      if (education.id === id) {
+        console.log(education);
+        return {
+          ...education,
+        [inputName]: inputValue
+        }
+      }
+      return education;
     })
+
+    setEducationList(changedEducation)
   } 
+
+  const handleAddEducation = () => {
+    console.log(educationList)
+
+    const newEducation = { 
+      id: crypto.randomUUID(), 
+      school: '', 
+      degree: '', 
+      startDate: '', 
+      endDate: '' 
+    };
+
+    setEducationList(prevEducation => [
+      ...prevEducation,
+      newEducation
+    ])
+  };
 
   return (
     <>
@@ -47,13 +69,17 @@ function App() {
         personalDetails={personalDetails}
         onChange={handlePersonalDetailsChange}
       />
-      <EducationSection
-        educationDetails={educationDetails}
-        onChange={handleEducationDetailsChange}
-      />
+      {educationList.map((education) => (
+         <EducationSection
+          key={education.id}
+          educationDetails={education}
+          onChange={(e) => handleEducationDetailsChange(e, education.id)}
+          btnLabel="Add education"
+          onClick={handleAddEducation}
+        />
+      ))}
       <ResumeSection 
         personalDetails={personalDetails}
-        educationDetails={educationDetails}
       />
     </>
   )
