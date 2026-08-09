@@ -80,6 +80,7 @@ function App() {
       ))}
       <ResumeSection 
         personalDetails={personalDetails}
+        educationList={educationList}
       />
     </>
   )
