@@ -7,7 +7,7 @@ function EducationSection({ educationDetails, onChange, onAdd, onRemove }) {
             <h1>Education</h1>
 
             {educationDetails.map(education => (
-                 <EducationForm 
+                <EducationForm 
                     key={education.id}
                     educationDetails={educationDetails}
                     onChange={(e) => onChange(e, education.id)}
