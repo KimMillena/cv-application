@@ -62,6 +62,12 @@ function App() {
     ])
   };
 
+  const handleRemoveEducation = (id) => {
+    setEducationList(prevEducation => 
+      prevEducation.filter(education => education.id !== id)
+    );
+  };
+
   return (
     <>
       <h1>CV Application</h1>
@@ -74,8 +80,8 @@ function App() {
           key={education.id}
           educationDetails={education}
           onChange={(e) => handleEducationDetailsChange(e, education.id)}
-          btnLabel="Add education"
-          onClick={handleAddEducation}
+          onAdd={handleAddEducation}
+          onRemove={() => handleRemoveEducation(education.id)}
         />
       ))}
       <ResumeSection 

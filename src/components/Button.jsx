@@ -1,11 +1,11 @@
-function Button({ label, onClick }) {
+function Button({ btnLabel, onClick }) {
     return (
         <>
             <button 
                 type="button"
                 onClick={onClick}
             >
-                {label}
+                {btnLabel}
             </button>
         </>
     );

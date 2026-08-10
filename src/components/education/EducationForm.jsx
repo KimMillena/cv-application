@@ -1,4 +1,6 @@
-function EducationForm({ educationDetails, onChange }) {
+import Button from '../Button';
+
+function EducationForm({ educationDetails, onChange, onRemove }) {
     return (
         <form className="education-form">
             <div>
@@ -40,6 +42,10 @@ function EducationForm({ educationDetails, onChange }) {
                     onChange={onChange}
                 />
             </div>
+            <Button 
+                btnLabel="Remove Education"
+                onClick={onRemove}
+            />
         </form>
     );
 }
