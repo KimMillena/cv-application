@@ -24,20 +24,20 @@ function EducationForm({ educationDetails, onChange, onRemove }) {
                 />
             </div>
             <div>
-                <label htmlFor="start-date">Start Date:</label>
+                <label htmlFor="education-start-date">Start Date:</label>
                 <input 
                     type="date"
-                    id="start-date"
-                    name="startDate"
+                    id="education-start-date"
+                    name="educationStartDate"
                     value={educationDetails.startDate}
                     onChange={onChange}
                 />
 
-                <label htmlFor="end-date">End Date:</label>
+                <label htmlFor="education-end-date">End Date:</label>
                 <input 
                     type="date"
-                    id="end-date"
-                    name="endDate"
+                    id="education-end-date"
+                    name="educationEndDate"
                     value={educationDetails.endDate}
                     onChange={onChange}
                 />

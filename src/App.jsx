@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import PersonalDetailsSection from './components/personal-details/PersonalDetailsSection';
 import EducationSection from './components/education/EducationSection';
+import ExperienceSection from './components/experience/ExperienceSection';
 import ResumeSection from './components/resume-section/ResumeSection';
 import './styles/App.css';
 
@@ -84,6 +85,7 @@ function App() {
           onRemove={() => handleRemoveEducation(education.id)}
         />
       ))}
+      <ExperienceSection />
       <ResumeSection 
         personalDetails={personalDetails}
         educationList={educationList}
