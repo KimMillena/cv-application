@@ -18,6 +18,10 @@ function App() {
     { id: crypto.randomUUID(), school: '', degree: '', startDate: '', endDate: '' },
   ]);
 
+  const [experienceList, setExperienceList] = useState([
+    { id: crypto.randomUUID(), companyName: '', positionTitle: '', experienceStartDate: '', experienceEndDate: '', jobDescription: '' },
+  ])
+
   const handlePersonalDetailsChange = (e) => {
     const inputName = e.target.name;
     const inputValue = e.target.value;
@@ -44,7 +48,7 @@ function App() {
     })
 
     setEducationList(changedEducation)
-  } 
+  };
 
   const handleAddEducation = () => {
     console.log(educationList)
@@ -69,6 +73,22 @@ function App() {
     );
   };
 
+  const handleAddExperience = () => {
+    const newExperience = {
+      id: crypto.randomUUID(),
+      companyName: '',
+      positionTitle: '',
+      experienceStartDate: '',
+      experienceEndDate: '',
+      jobDescription: ''
+    };
+
+    setExperienceList(prevExperience => [
+      ...prevExperience,
+      newExperience
+    ])
+  };
+
   return (
     <>
       <h1>CV Application</h1>
@@ -76,7 +96,7 @@ function App() {
         personalDetails={personalDetails}
         onChange={handlePersonalDetailsChange}
       />
-      {educationList.map((education) => (
+      {educationList.map(education => (
          <EducationSection
           key={education.id}
           educationDetails={education}
@@ -85,7 +105,12 @@ function App() {
           onRemove={() => handleRemoveEducation(education.id)}
         />
       ))}
-      <ExperienceSection />
+      {experienceList.map(experience => (
+        <ExperienceSection
+          key={experience.id}
+          onAdd={handleAddExperience}
+        />
+      ))}
       <ResumeSection 
         personalDetails={personalDetails}
         educationList={educationList}
