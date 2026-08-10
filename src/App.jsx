@@ -106,6 +106,13 @@ function App() {
     ])
   };
 
+  const handleRemoveExperience = (id) => {
+    setExperienceList(prevExperience =>
+      prevExperience.filter(experience => experience.id !== id)
+    );
+        console.log(experienceList);
+  };
+
   return (
     <>
       <h1>CV Application</h1>
@@ -128,6 +135,7 @@ function App() {
           experienceDetails={experience}
           onChange={(e) => handleExperienceChange(e, experience.id)}
           onAdd={handleAddExperience}
+          onRemove={() => handleRemoveExperience(experience.id)}
         />
       ))}
       <ResumeSection 

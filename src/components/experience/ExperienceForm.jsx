@@ -1,4 +1,6 @@
-function ExperienceForm({ experienceDetails, onChange }) {
+import Button from '../Button';
+
+function ExperienceForm({ experienceDetails, onChange, onRemove }) {
     return (
         <form className="experience-form">
             <div>
@@ -48,6 +50,10 @@ function ExperienceForm({ experienceDetails, onChange }) {
                     onChange={onChange}
                 />
             </div>
+            <Button 
+                btnLabel="Remove Experience"
+                onClick={onRemove}
+            />
         </form>
     );
 }
