@@ -15,7 +15,7 @@ function App() {
   });
 
   const [educationList, setEducationList] = useState([
-    { id: crypto.randomUUID(), school: '', degree: '', startDate: '', endDate: '' },
+    { id: crypto.randomUUID(), school: '', degree: '', educationStartDate: '', educationEndDate: '' },
   ]);
 
   const [experienceList, setExperienceList] = useState([
@@ -120,15 +120,12 @@ function App() {
         personalDetails={personalDetails}
         onChange={handlePersonalDetailsChange}
       />
-      {educationList.map(education => (
-         <EducationSection
-          key={education.id}
-          educationDetails={education}
-          onChange={(e) => handleEducationDetailsChange(e, education.id)}
-          onAdd={handleAddEducation}
-          onRemove={() => handleRemoveEducation(education.id)}
-        />
-      ))}
+      <EducationSection
+        educationDetails={educationList}
+        onChange={handleEducationDetailsChange}
+        onAdd={handleAddEducation}
+        onRemove={handleRemoveEducation}
+      />
       {experienceList.map(experience => (
         <ExperienceSection
           key={experience.id}

@@ -29,7 +29,7 @@ function EducationForm({ educationDetails, onChange, onRemove }) {
                     type="date"
                     id="education-start-date"
                     name="educationStartDate"
-                    value={educationDetails.startDate}
+                    value={educationDetails.educationStartDate}
                     onChange={onChange}
                 />
 
@@ -38,7 +38,7 @@ function EducationForm({ educationDetails, onChange, onRemove }) {
                     type="date"
                     id="education-end-date"
                     name="educationEndDate"
-                    value={educationDetails.endDate}
+                    value={educationDetails.educationEndDate}
                     onChange={onChange}
                 />
             </div>

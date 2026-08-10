@@ -12,8 +12,8 @@ function ResumeSection({ personalDetails, educationList, experienceList }) {
                 <div className="education-info-section">
                     <p>{education.school}</p>
                     <p>{education.degree}</p>
-                    <p>{education.startDate}</p>
-                    <p>{education.endDate}</p>
+                    <p>{education.educationStartDate}</p>
+                    <p>{education.educationEndDate}</p>
                 </div>
             ))}
 
