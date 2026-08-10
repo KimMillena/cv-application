@@ -1,4 +1,4 @@
-function ResumeSection({ personalDetails, educationList }) {
+function ResumeSection({ personalDetails, educationList, experienceList }) {
     return (
         <div className="resume-section">
             <h1>Resume</h1>
@@ -14,6 +14,16 @@ function ResumeSection({ personalDetails, educationList }) {
                     <p>{education.degree}</p>
                     <p>{education.startDate}</p>
                     <p>{education.endDate}</p>
+                </div>
+            ))}
+
+            {experienceList.map(experience => (
+                <div className="experience-info-section">
+                    <p>{experience.companyName}</p>
+                    <p>{experience.positionTitle}</p>
+                    <p>{experience.experienceStartDate}</p>
+                    <p>{experience.experienceEndDate}</p>
+                    <p>{experience.jobDescription}</p>
                 </div>
             ))}
         </div>

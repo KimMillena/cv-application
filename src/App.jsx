@@ -50,6 +50,23 @@ function App() {
     setEducationList(changedEducation)
   };
 
+  const handleExperienceChange = (e, id) => {
+    const inputName = e.target.name;
+    const inputValue = e.target.value;
+
+    const changedExperience = experienceList.map(experience => {
+      if (experience.id === id) {
+        return {
+          ...experience,
+          [inputName]: inputValue
+        }
+      }
+      return experience;
+    })
+
+    setExperienceList(changedExperience);
+  };
+
   const handleAddEducation = () => {
     console.log(educationList)
 
@@ -108,12 +125,15 @@ function App() {
       {experienceList.map(experience => (
         <ExperienceSection
           key={experience.id}
+          experienceDetails={experience}
+          onChange={(e) => handleExperienceChange(e, experience.id)}
           onAdd={handleAddExperience}
         />
       ))}
       <ResumeSection 
         personalDetails={personalDetails}
         educationList={educationList}
+        experienceList={experienceList}
       />
     </>
   )

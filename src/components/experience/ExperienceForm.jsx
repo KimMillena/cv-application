@@ -1,4 +1,4 @@
-function ExperienceForm() {
+function ExperienceForm({ experienceDetails, onChange }) {
     return (
         <form className="experience-form">
             <div>
@@ -7,6 +7,8 @@ function ExperienceForm() {
                     type="text"
                     id="company-name"
                     name="companyName" 
+                    value={experienceDetails.companyName}
+                    onChange={onChange}
                 />
             </div>
             <div>
@@ -15,6 +17,8 @@ function ExperienceForm() {
                     type="text"
                     id="experience-position-title"
                     name="positionTitle"
+                    value={experienceDetails.positionTitle}
+                    onChange={onChange}
                 />
             </div>
             <div>
@@ -22,20 +26,26 @@ function ExperienceForm() {
                 <input 
                     type="date"
                     id="experience-start-date"
-                    name="experienceStartDate" 
+                    name="experienceStartDate"
+                    value={experienceDetails.experienceStartDate}
+                    onChange={onChange}
                 />
                 <label htmlFor="experience-end-date">End Date:</label>
                 <input 
                     type="date"
                     id="experience-end-date"
-                    name="experienceEndDate" 
+                    name="experienceEndDate"
+                    value={experienceDetails.experienceEndDate}
+                    onChange={onChange}
                 />
             </div>
             <div>
                 <label htmlFor="job-description">Job Description:</label>
                 <textarea 
                     id="job-description"
-                    name="jobDescription" 
+                    name="jobDescription"
+                    value={experienceDetails.jobDescription}
+                    onChange={onChange}
                 />
             </div>
         </form>
