@@ -1,0 +1,17 @@
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--lg-gap);
+}
+
+.experience-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--lg-gap); 
+}
+
+.experience-form .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--md-gap);
+}

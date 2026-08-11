@@ -1,0 +1,20 @@
+.education-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--lg-gap);
+}
+
+.education-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--lg-gap);
+}
+
+.education-form .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--md-gap);
+}
+
+
+

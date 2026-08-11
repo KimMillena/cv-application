@@ -1,4 +1,5 @@
 import PersonalDetailsForm from './PersonalDetailsForm';
+import '../../styles/PersonalDetailsSection.css';
 
 function PersonalDetailsSection({ personalDetails, onChange }) {
     return (

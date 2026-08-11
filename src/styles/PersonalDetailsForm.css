@@ -1,0 +1,9 @@
+.personal-details-form .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--md-gap);
+}
+
+.personal-details-form .input-group input {
+    margin-bottom: var(--lg-margin);
+}

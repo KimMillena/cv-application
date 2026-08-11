@@ -1,5 +1,6 @@
 import EducationForm from './EducationForm';
 import Button from '../Button';
+import '../../styles/EducationSection.css';
 
 function EducationSection({ educationDetails, onChange, onAdd, onRemove }) {
     return (
@@ -16,7 +17,8 @@ function EducationSection({ educationDetails, onChange, onAdd, onRemove }) {
             ))}
 
             <Button 
-                btnLabel="Add education"
+                btnLabel="Add Education"
+                btnClassName="add-education-btn"
                 onClick={onAdd}
             />
         </div>

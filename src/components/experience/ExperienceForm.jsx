@@ -1,5 +1,6 @@
 import ResumeInput from '../ResumeInput';
 import Button from '../Button';
+import '../../styles/ExperienceForm.css';
 
 function ExperienceForm({ experienceDetails, onChange, onRemove }) {
     return (

@@ -1,4 +1,5 @@
 import ResumeInput from '../ResumeInput';
+import '../../styles/PersonalDetailsForm.css';
 
 function PersonalDetailsForm({ personalDetails, onChange }) {
     return (
@@ -22,7 +23,7 @@ function PersonalDetailsForm({ personalDetails, onChange }) {
                 />
             </div>
 
-            <div class="input-group">
+            <div className="input-group">
                 <ResumeInput 
                     id="email"
                     type="email"
@@ -43,7 +44,7 @@ function PersonalDetailsForm({ personalDetails, onChange }) {
                     onChange={onChange}
                 />
             </div>
-            
+
             <div className="input-group">
                 <ResumeInput 
                     id="address"

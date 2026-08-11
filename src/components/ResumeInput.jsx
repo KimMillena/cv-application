@@ -1,3 +1,5 @@
+import '../styles/ResumeInput.css';
+
 function ResumeInput({ 
     id,
     type,

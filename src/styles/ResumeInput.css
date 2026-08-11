@@ -1,0 +1,9 @@
+label {
+    font-weight: 600;
+}
+
+input,
+textarea {
+    border-radius: var(--md-border-radius);
+    padding: var(--md-padding);
+}

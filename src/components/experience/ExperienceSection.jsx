@@ -1,5 +1,6 @@
 import ExperienceForm from './ExperienceForm';
 import Button from '../Button';
+import '../../styles/ExperienceSection.css';
 
 function ExperienceSection({ experienceDetails, onChange, onAdd, onRemove }) {
     return (
@@ -16,7 +17,8 @@ function ExperienceSection({ experienceDetails, onChange, onAdd, onRemove }) {
             ))}
 
             <Button 
-                btnLabel="Add experience" 
+                btnLabel="Add Experience"
+                btnClassName="add-experience-btn" 
                 onClick={onAdd}
             />
         </div>

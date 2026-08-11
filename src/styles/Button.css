@@ -1,0 +1,7 @@
+/* BUTTON STYLINGS */
+
+.btn {
+    border-radius: var(--md-border-radius);
+    padding: var(--md-padding);
+    cursor: pointer;
+}

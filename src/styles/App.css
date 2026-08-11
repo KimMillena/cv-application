@@ -1,0 +1,13 @@
+.main-app {
+    padding: var(--lg-padding);
+}
+
+.main-header {
+    margin-bottom: var(--lg-margin);
+}
+
+.resume-builder {
+    display: flex;
+    flex-direction: column;
+    gap: var(--lg-gap);
+}

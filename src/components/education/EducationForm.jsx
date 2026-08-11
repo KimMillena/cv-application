@@ -1,5 +1,6 @@
 import ResumeInput from '../ResumeInput';
 import Button from '../Button';
+import '../../styles/EducationForm.css';
 
 function EducationForm({ educationDetails, onChange, onRemove }) {
     return (

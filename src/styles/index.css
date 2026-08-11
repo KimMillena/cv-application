@@ -1,5 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+  --sm-gap: 0.25rem;
+  --md-gap: 0.5rem;
+  --lg-gap: 1rem;
+
+  --sm-margin: 0.25rem;
+  --md-margin: 0.5rem;
+  --lg-margin: 1rem;
+
+  --sm-padding: 0.25rem;
+  --md-padding: 0.5rem;
+  --lg-padding: 1rem;
+
+  --sm-border-radius: 0.25rem;
+  --md-border-radius: 0.5rem;
+  --lg-border-radius: 1rem;
 }
