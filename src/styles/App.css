@@ -1,4 +1,5 @@
 .main-app {
+    background-color: var(--main-bg-color);
     padding: var(--lg-padding);
 }
 

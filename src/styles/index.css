@@ -8,6 +8,14 @@
 }
 
 :root {
+  --main-bg-color: #f3f3f9;
+  --border-color: #e5e5e5;
+  --card-bg-color: #ffffff;
+
+  --add-btn-bg: #024a70;
+  --remove-btn-bg: #fb2c36;
+  --button-padding: 0.75rem;
+
   --sm-gap: 0.25rem;
   --md-gap: 0.5rem;
   --lg-gap: 1rem;

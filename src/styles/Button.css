@@ -1,7 +1,22 @@
 /* BUTTON STYLINGS */
 
 .btn {
+    font-weight: 500;
     border-radius: var(--md-border-radius);
-    padding: var(--md-padding);
+    padding: var(--button-padding);
     cursor: pointer;
+}
+
+.add-education-btn,
+.add-experience-btn {
+    color: white;
+    background-color: var(--add-btn-bg);
+    border: none;
+}
+
+.remove-education-btn,
+.remove-experience-btn {
+    color: #fff;
+    background-color: var(--remove-btn-bg);
+    border: none;
 }

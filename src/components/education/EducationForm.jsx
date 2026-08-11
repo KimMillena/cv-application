@@ -49,6 +49,7 @@ function EducationForm({ educationDetails, onChange, onRemove }) {
             <div className="button-row">
                 <Button 
                     btnLabel="Remove Education"
+                    btnClassName="remove-education-btn"
                     onClick={onRemove}
                 />
             </div>

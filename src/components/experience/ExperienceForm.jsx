@@ -60,6 +60,7 @@ function ExperienceForm({ experienceDetails, onChange, onRemove }) {
             <div className="button-row">
                 <Button 
                     btnLabel="Remove Experience"
+                    btnClassName="remove-education-btn"
                     onClick={onRemove}
                 />
             </div>
