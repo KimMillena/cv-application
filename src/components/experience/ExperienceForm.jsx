@@ -1,59 +1,67 @@
+import ResumeInput from '../ResumeInput';
 import Button from '../Button';
 
 function ExperienceForm({ experienceDetails, onChange, onRemove }) {
     return (
         <form className="experience-form">
-            <div>
-                <label htmlFor="company-name">Company Name:</label>
-                <input 
-                    type="text"
+            <div className="input-group">
+                <ResumeInput 
                     id="company-name"
-                    name="companyName" 
+                    type="text"
+                    labelName="Company Name:"
+                    nameData="companyName"
                     value={experienceDetails.companyName}
                     onChange={onChange}
                 />
             </div>
-            <div>
-                <label htmlFor="position-title">Position Title:</label>
-                <input 
+
+            <div className="input-group">
+                <ResumeInput 
+                    id="position-title"
                     type="text"
-                    id="experience-position-title"
-                    name="positionTitle"
+                    labelName="Position Title:"
+                    nameData="positionTitle"
                     value={experienceDetails.positionTitle}
                     onChange={onChange}
                 />
             </div>
-            <div>
-                <label htmlFor="experience-start-date">Start Date:</label>
-                <input 
-                    type="date"
+
+            <div className="input-group">
+                <ResumeInput 
                     id="experience-start-date"
-                    name="experienceStartDate"
+                    type="date"
+                    labelName="Start Date:"
+                    nameData="experienceStartDate"
                     value={experienceDetails.experienceStartDate}
                     onChange={onChange}
                 />
-                <label htmlFor="experience-end-date">End Date:</label>
-                <input 
-                    type="date"
+                <ResumeInput 
                     id="experience-end-date"
-                    name="experienceEndDate"
+                    type="date"
+                    labelName="End Date:"
+                    nameData="experienceEndDate"
                     value={experienceDetails.experienceEndDate}
                     onChange={onChange}
                 />
             </div>
-            <div>
-                <label htmlFor="job-description">Job Description:</label>
-                <textarea 
+
+            <div className="input-group">
+                <ResumeInput 
                     id="job-description"
-                    name="jobDescription"
+                    type="textarea"
+                    labelName="Job Description:"
+                    nameData="jobDescription"
                     value={experienceDetails.jobDescription}
                     onChange={onChange}
                 />
             </div>
-            <Button 
-                btnLabel="Remove Experience"
-                onClick={onRemove}
-            />
+
+            <div className="button-row">
+                <Button 
+                    btnLabel="Remove Experience"
+                    onClick={onRemove}
+                />
+            </div>
         </form>
     );
 }

@@ -1,6 +1,6 @@
-function ResumeSection({ personalDetails, educationList, experienceList }) {
+function Resume({ personalDetails, educationList, experienceList }) {
     return (
-        <div className="resume-section">
+        <div className="resume">
             <h1>Resume</h1>
             <p>{personalDetails.firstName}</p>
             <p>{personalDetails.lastName}</p>
@@ -30,4 +30,4 @@ function ResumeSection({ personalDetails, educationList, experienceList }) {
     );
 }
 
-export default ResumeSection;
+export default Resume;

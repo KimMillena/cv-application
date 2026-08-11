@@ -2,7 +2,7 @@ import { useState } from 'react';
 import PersonalDetailsSection from './components/personal-details/PersonalDetailsSection';
 import EducationSection from './components/education/EducationSection';
 import ExperienceSection from './components/experience/ExperienceSection';
-import ResumeSection from './components/resume-section/ResumeSection';
+import Resume from './components/resume/Resume';
 import './styles/App.css';
 
 function App() {
@@ -127,30 +127,36 @@ function App() {
   };
 
   return (
-    <>
+    <main className="main-app">
       <h1>CV Application</h1>
-      <PersonalDetailsSection 
-        personalDetails={personalDetails}
-        onChange={handlePersonalDetailsChange}
-      />
-      <EducationSection
-        educationDetails={educationList}
-        onChange={handleEducationDetailsChange}
-        onAdd={handleAddEducation}
-        onRemove={handleRemoveEducation}
-      />
-      <ExperienceSection
-        experienceDetails={experienceList}
-        onChange={handleExperienceChange}
-        onAdd={handleAddExperience}
-        onRemove={handleRemoveExperience}
-       />
-      <ResumeSection 
-        personalDetails={personalDetails}
-        educationList={educationList}
-        experienceList={experienceList}
-      />
-    </>
+
+      <div className="resume-builder">
+        <PersonalDetailsSection 
+          personalDetails={personalDetails}
+          onChange={handlePersonalDetailsChange}
+        />
+        <EducationSection
+          educationDetails={educationList}
+          onChange={handleEducationDetailsChange}
+          onAdd={handleAddEducation}
+          onRemove={handleRemoveEducation}
+        />
+        <ExperienceSection
+          experienceDetails={experienceList}
+          onChange={handleExperienceChange}
+          onAdd={handleAddExperience}
+          onRemove={handleRemoveExperience}
+        />
+      </div>
+      
+      <div className="resume-preview">
+        <Resume 
+          personalDetails={personalDetails}
+          educationList={educationList}
+          experienceList={experienceList}
+        />
+      </div>
+    </main>
   )
 }
 

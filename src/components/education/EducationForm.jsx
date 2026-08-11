@@ -1,51 +1,56 @@
+import ResumeInput from '../ResumeInput';
 import Button from '../Button';
 
 function EducationForm({ educationDetails, onChange, onRemove }) {
     return (
         <form className="education-form">
-            <div>
-                <label htmlFor="school">School:</label>
-                <input 
-                    type="text" 
+            <div className="input-group">
+                <ResumeInput 
                     id="school"
-                    name="school"
+                    type="text"
+                    labelName="School:"
+                    nameData="school"
                     value={educationDetails.school}
                     onChange={onChange}
                 />
             </div>
-            <div>
-                <label htmlFor="degree">Degree:</label>
-                <input 
-                    type="text"
+
+            <div className="input-group">
+                <ResumeInput 
                     id="degree"
-                    name="degree"
+                    type="text"
+                    labelName="Degree:"
+                    nameData="degree"
                     value={educationDetails.degree}
                     onChange={onChange}
                 />
             </div>
-            <div>
-                <label htmlFor="education-start-date">Start Date:</label>
-                <input 
-                    type="date"
+
+            <div className="input-group">
+                <ResumeInput 
                     id="education-start-date"
-                    name="educationStartDate"
+                    type="date"
+                    labelName="Start Date:"
+                    nameData="educationStartDate"
                     value={educationDetails.educationStartDate}
                     onChange={onChange}
                 />
-
-                <label htmlFor="education-end-date">End Date:</label>
-                <input 
-                    type="date"
+                <ResumeInput 
                     id="education-end-date"
-                    name="educationEndDate"
+                    type="date"
+                    labelName="End Date:"
+                    nameData="educationEndDate"
                     value={educationDetails.educationEndDate}
                     onChange={onChange}
                 />
             </div>
-            <Button 
-                btnLabel="Remove Education"
-                onClick={onRemove}
-            />
+
+            <div className="button-row">
+                <Button 
+                    btnLabel="Remove Education"
+                    onClick={onRemove}
+                />
+            </div>
         </form>
     );
 }

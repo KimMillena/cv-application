@@ -1,54 +1,57 @@
+import ResumeInput from '../ResumeInput';
+
 function PersonalDetailsForm({ personalDetails, onChange }) {
     return (
         <form className="personal-details-form">
-            <div>
-                <label htmlFor="first-name">First Name:</label>
-                <input 
-                    type="text" 
+            <div className="input-group">
+                <ResumeInput 
                     id="first-name"
-                    name="firstName"
+                    type="text"
+                    labelName="First Name:"
+                    nameData="firstName"
                     value={personalDetails.firstName}
-                    onChange={(e) => onChange(e)}
+                    onChange={onChange}
                 />
-            </div>
-            <div>
-                <label htmlFor="last-name">Last Name:</label>
-                <input 
-                    type="text"
+                <ResumeInput 
                     id="last-name"
-                    name="lastName"
-                    value={personalDetails.lastName}
-                    onChange={(e) => onChange(e)}
-                />
-            </div>
-            <div>
-                <label htmlFor="email">Email:</label>
-                <input 
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={personalDetails.email}
-                    onChange={(e) => onChange(e)}
-                />
-            </div>
-            <div>
-                <label htmlFor="phone-number">Phone Number:</label>
-                <input 
-                    type="tel"
-                    id="phone-number"
-                    name="phoneNumber"
-                    value={personalDetails.phoneNumber}
-                    onChange={(e) => onChange(e)}
-                />
-            </div>
-            <div>
-                <label htmlFor="address">Address:</label>
-                <input 
                     type="text"
+                    labelName="Last Name:"
+                    nameData="lastName"
+                    value={personalDetails.lastName}
+                    onChange={onChange}
+                />
+            </div>
+
+            <div class="input-group">
+                <ResumeInput 
+                    id="email"
+                    type="email"
+                    labelName="Email:"
+                    nameData="email"
+                    value={personalDetails.email}
+                    onChange={onChange}
+                />
+            </div>
+
+            <div className="input-group">
+                 <ResumeInput 
+                    id="phone-number"
+                    type="number"
+                    labelName="Phone Number:"
+                    nameData="phoneNumber"
+                    value={personalDetails.phoneNumber}
+                    onChange={onChange}
+                />
+            </div>
+            
+            <div className="input-group">
+                <ResumeInput 
                     id="address"
-                    name="address"
+                    type="text"
+                    labelName="Address:"
+                    nameData="address"
                     value={personalDetails.address}
-                    onChange={(e) => onChange(e)}
+                    onChange={onChange}
                 />
             </div>
         </form>
