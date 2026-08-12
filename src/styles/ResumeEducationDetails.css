@@ -1,0 +1,38 @@
+/* RESUME EDUCATION DETAILS STYLINGS */
+
+.resume-education-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--lg-gap);
+    flex-wrap: wrap;
+}
+
+/* RESUME EDUCATION DETAILS GROUP */
+
+.resume-education-details-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* RESUME EDUCATION LEFT SIDE */
+
+.resume-education-left {
+    flex: 1;
+}
+
+.resume-education-school {
+    font-weight: bold;
+}
+
+/* RESUME EDUCATION RIGHT SIDE */
+
+.resume-education-right {
+    display: flex;
+    gap: var(--sm-gap);
+}
+
+.resume-education-right p + p::before {
+    content: '-';
+    margin-right: var(--sm-margin);
+}

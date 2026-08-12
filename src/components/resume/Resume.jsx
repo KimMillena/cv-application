@@ -1,4 +1,5 @@
 import ResumePersonalDetails from "./ResumePersonalDetails";
+import ResumeEducationDetails from "./ResumeEducationDetails";
 import '../../styles/Resume.css';
 
 function Resume({ personalDetails, educationList, experienceList }) {
@@ -6,14 +7,7 @@ function Resume({ personalDetails, educationList, experienceList }) {
         <div className="resume">
             <ResumePersonalDetails personalDetails={personalDetails} />
 
-            {educationList.map(education => (
-                <div className="education-info-section">
-                    <p>{education.school}</p>
-                    <p>{education.degree}</p>
-                    <p>{education.educationStartDate}</p>
-                    <p>{education.educationEndDate}</p>
-                </div>
-            ))}
+            <ResumeEducationDetails educationDetails={educationList}/>
 
             {experienceList.map(experience => (
                 <div className="experience-info-section">
