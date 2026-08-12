@@ -1,12 +1,10 @@
+import ResumePersonalDetails from "./ResumePersonalDetails";
+import '../../styles/Resume.css';
+
 function Resume({ personalDetails, educationList, experienceList }) {
     return (
         <div className="resume">
-            <h1>Resume</h1>
-            <p>{personalDetails.firstName}</p>
-            <p>{personalDetails.lastName}</p>
-            <p>{personalDetails.email}</p>
-            <p>{personalDetails.phoneNumber}</p>
-            <p>{personalDetails.address}</p>
+            <ResumePersonalDetails personalDetails={personalDetails} />
 
             {educationList.map(education => (
                 <div className="education-info-section">

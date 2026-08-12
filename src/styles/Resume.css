@@ -1,0 +1,8 @@
+/* RESUME STYLINGS */
+
+.resume {
+    background-color: var(--card-bg-color);
+    box-shadow: 1px 6px 8px 1px rgba(0, 0, 0, 0.3);
+    padding: var(--lg-padding);
+    min-height: 50vh;
+}

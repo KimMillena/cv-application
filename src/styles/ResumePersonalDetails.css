@@ -1,0 +1,22 @@
+/* RESUME PERSONAL DETAILS STYLINGS */
+
+.resume-personal-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--lg-gap);
+}
+
+.resume-contact-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--sm-gap);
+    flex-wrap: wrap;
+}
+
+.resume-contact-details p + p::before {
+    content: "|";
+    margin-right: var(--md-margin);
+}
