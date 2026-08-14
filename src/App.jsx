@@ -52,7 +52,6 @@ function App() {
 
     const changedEducation = educationList.map(education => {
       if (education.id === id) {
-        console.log(education);
         return {
           ...education,
         [inputName]: inputValue
@@ -82,8 +81,6 @@ function App() {
   };
 
   const handleAddEducation = () => {
-    console.log(educationList)
-
     const newEducation = { 
       id: crypto.randomUUID(), 
       school: '', 
@@ -124,11 +121,6 @@ function App() {
     setExperienceList(prevExperience =>
       prevExperience.filter(experience => experience.id !== id)
     );
-        console.log(experienceList);
-  };
-
-  const handleClearResume = () => {
-
   };
 
   return (
@@ -138,7 +130,6 @@ function App() {
       <div className="resume-builder">
         <Header 
           headerTitle="Resume Builder"
-          onClick={handleClearResume}
         />
 
         <PersonalDetailsSection 

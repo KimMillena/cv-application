@@ -8,7 +8,7 @@ function ResumeEducationDetails({ educationDetails }) {
             <hr></hr>
 
             {educationDetails.map(education => (
-                <div className="resume-education-details-group">
+                <div key={education.id} className="resume-education-details-group">
                     <div className="resume-education-left">
                         {education.school && (
                             <p className="resume-education-school">{education.school}</p>

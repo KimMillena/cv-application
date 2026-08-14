@@ -8,7 +8,7 @@ function ResumeExperienceDetails({ experienceDetails }) {
             <hr></hr>
 
             {experienceDetails.map(experience => (
-                <div className="resume-experience-group">
+                <div key={experience.id} className="resume-experience-group">
                     <div className="resume-experience-top">
                         <div className="resume-experience-left">
                             {experience.companyName && (
