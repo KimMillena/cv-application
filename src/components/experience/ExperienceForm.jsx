@@ -12,6 +12,7 @@ function ExperienceForm({ experienceDetails, onChange, onRemove }) {
                     labelName="Company Name:"
                     nameData="companyName"
                     value={experienceDetails.companyName}
+                    placeholder="e.g Sample Company Inc."
                     onChange={onChange}
                 />
             </div>
@@ -23,6 +24,7 @@ function ExperienceForm({ experienceDetails, onChange, onRemove }) {
                     labelName="Position Title:"
                     nameData="positionTitle"
                     value={experienceDetails.positionTitle}
+                    placeholder="e.g Software Engineer, Teacher/Professor, Accountant"
                     onChange={onChange}
                 />
             </div>
@@ -53,6 +55,7 @@ function ExperienceForm({ experienceDetails, onChange, onRemove }) {
                     labelName="Job Description:"
                     nameData="jobDescription"
                     value={experienceDetails.jobDescription}
+                    placeholder="Write a short and clear description about your responsibilities in your job."
                     onChange={onChange}
                 />
             </div>

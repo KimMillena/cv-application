@@ -9,23 +9,27 @@ function ResumeExperienceDetails({ experienceDetails }) {
 
             {experienceDetails.map(experience => (
                 <div className="resume-experience-group">
-                    <div className="resume-experience-left">
-                        {experience.companyName && (
-                            <p className="resume-experience-company">{experience.companyName}</p>
-                        )}
+                    <div className="resume-experience-top">
+                        <div className="resume-experience-left">
+                            {experience.companyName && (
+                                <p className="resume-experience-company">{experience.companyName}</p>
+                            )}
+                        </div>
+                        <div className="resume-experience-right">
+                            {experience.experienceStartDate && (
+                                <p className="resume-experience-start-date">{formatDate(experience.experienceStartDate)}</p>
+                            )}
+                            {experience.experienceEndDate && (
+                                <p className="resume-experience-end-date">{formatDate(experience.experienceEndDate)}</p>
+                            )}
+                        </div>
+                    </div>
+                    <div className="resume-experience-bottom">
                         {experience.positionTitle && (
                             <p className="resume-experience-position">{experience.positionTitle}</p>
                         )}
                         {experience.jobDescription && (
                             <p className="resume-experience-description">{experience.jobDescription}</p>
-                        )}
-                    </div>
-                    <div className="resume-experience-right">
-                        {experience.experienceStartDate && (
-                            <p className="resume-experience-start-date">{formatDate(experience.experienceStartDate)}</p>
-                        )}
-                        {experience.experienceEndDate && (
-                            <p className="resume-experience-end-date">{formatDate(experience.experienceEndDate)}</p>
                         )}
                     </div>
                 </div>

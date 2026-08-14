@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Header from './components/Header';
 import PersonalDetailsSection from './components/personal-details/PersonalDetailsSection';
 import EducationSection from './components/education/EducationSection';
 import ExperienceSection from './components/experience/ExperienceSection';
@@ -126,9 +127,20 @@ function App() {
         console.log(experienceList);
   };
 
+  const handleClearResume = () => {
+
+  };
+
   return (
     <main className="main-app">
+      
+
       <div className="resume-builder">
+        <Header 
+          headerTitle="Resume Builder"
+          onClick={handleClearResume}
+        />
+
         <PersonalDetailsSection 
           personalDetails={personalDetails}
           onChange={handlePersonalDetailsChange}

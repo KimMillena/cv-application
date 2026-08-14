@@ -13,6 +13,22 @@
     flex-wrap: wrap;
 }
 
+.resume-experience-top {
+    display: flex;
+    width: 100%;
+}
+
+.resume-experience-bottom {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.resume-experience-bottom p {
+    overflow-wrap: anywhere;
+}
+
 /* RESUME EXPERIENCE LEFT SIDE */
 
 .resume-experience-left {

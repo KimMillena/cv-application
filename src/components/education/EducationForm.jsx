@@ -12,6 +12,7 @@ function EducationForm({ educationDetails, onChange, onRemove }) {
                     labelName="School:"
                     nameData="school"
                     value={educationDetails.school}
+                    placeholder="e.g Sample University"
                     onChange={onChange}
                 />
             </div>
@@ -23,6 +24,7 @@ function EducationForm({ educationDetails, onChange, onRemove }) {
                     labelName="Degree:"
                     nameData="degree"
                     value={educationDetails.degree}
+                    placeholder="e.g Bachelor of Science in Information Technology"
                     onChange={onChange}
                 />
             </div>

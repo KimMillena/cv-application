@@ -20,6 +20,7 @@
   --sm-gap: 0.25rem;
   --md-gap: 0.5rem;
   --lg-gap: 1rem;
+  --app-gap: 1.5rem;
 
   --sm-margin: 0.25rem;
   --md-margin: 0.5rem;
@@ -28,6 +29,7 @@
   --sm-padding: 0.25rem;
   --md-padding: 0.5rem;
   --lg-padding: 1rem;
+  --app-padding: 2rem 1rem;
   --resume-padding: 2rem;
   --button-padding: 0.75rem;
 

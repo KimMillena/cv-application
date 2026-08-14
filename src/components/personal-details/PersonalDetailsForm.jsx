@@ -11,6 +11,7 @@ function PersonalDetailsForm({ personalDetails, onChange }) {
                     labelName="First Name:"
                     nameData="firstName"
                     value={personalDetails.firstName}
+                    placeholder="e.g John"
                     onChange={onChange}
                 />
                 <ResumeInput 
@@ -19,6 +20,7 @@ function PersonalDetailsForm({ personalDetails, onChange }) {
                     labelName="Last Name:"
                     nameData="lastName"
                     value={personalDetails.lastName}
+                    placeholder="e.g Doe"
                     onChange={onChange}
                 />
             </div>
@@ -30,6 +32,7 @@ function PersonalDetailsForm({ personalDetails, onChange }) {
                     labelName="Email:"
                     nameData="email"
                     value={personalDetails.email}
+                    placeholder="e.g sample@email.com"
                     onChange={onChange}
                 />
             </div>
@@ -41,6 +44,7 @@ function PersonalDetailsForm({ personalDetails, onChange }) {
                     labelName="Phone Number:"
                     nameData="phoneNumber"
                     value={personalDetails.phoneNumber}
+                    placeholder="e.g 1234567890"
                     onChange={onChange}
                 />
             </div>
@@ -52,6 +56,7 @@ function PersonalDetailsForm({ personalDetails, onChange }) {
                     labelName="Address:"
                     nameData="address"
                     value={personalDetails.address}
+                    placeholder="e.g 123 Main Street, City, Country"
                     onChange={onChange}
                 />
             </div>

@@ -6,6 +6,7 @@ function ResumeInput({
     labelName,
     nameData,
     value,
+    placeholder,
     onChange,
 }) {
     return (
@@ -16,6 +17,7 @@ function ResumeInput({
                     id={id}
                     name={nameData}
                     value={value}
+                    placeholder={placeholder}
                     onChange={onChange}
                 />
             ) : (
@@ -24,6 +26,7 @@ function ResumeInput({
                     id={id}
                     name={nameData}
                     value={value}
+                    placeholder={placeholder}
                     onChange={onChange}
                 />
             )}

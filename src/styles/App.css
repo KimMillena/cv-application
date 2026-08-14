@@ -1,9 +1,11 @@
+/* APP STYLINGS */
+
 .main-app {
     display: flex;
     flex-direction: column;
-    gap: var(--lg-gap);    
+    gap: var(--app-gap);    
     background-color: var(--main-bg-color);
-    padding: var(--lg-padding);
+    padding: var(--app-padding);
 }
 
 .main-header {
