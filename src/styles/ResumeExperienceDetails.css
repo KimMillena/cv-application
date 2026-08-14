@@ -1,0 +1,39 @@
+/* RESUME EXPERIENCE DETAILS STYLINGS */
+
+.resume-experience-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--lg-gap);
+}
+
+/* RESUME EXPERIENCE GROUP SIDE */
+
+.resume-experience-group {
+    display: flex;    
+}
+
+/* RESUME EXPERIENCE LEFT SIDE */
+
+.resume-experience-left {
+    flex: 1;
+}
+
+.resume-experience-company {
+    font-weight: bold;
+}
+
+.resume-experience-position {
+    margin-bottom: var(--sm-margin);
+}
+
+/* RESUME EXPERIENCE RIGHT SIDE */
+
+.resume-experience-right {
+    display: flex;
+    gap: var(--sm-gap);
+}
+
+.resume-experience-right p + p::before {
+    content: '-';
+    margin-right: var(--sm-margin);
+}

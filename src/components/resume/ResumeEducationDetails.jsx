@@ -5,6 +5,7 @@ function ResumeEducationDetails({ educationDetails }) {
     return (
         <div className="resume-education-details">
             <h2 className="resume-education-details-header">Education</h2>
+            
             {educationDetails.map(education => (
                 <div className="resume-education-details-group">
                     <div className="resume-education-left">
