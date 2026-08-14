@@ -128,8 +128,6 @@ function App() {
 
   return (
     <main className="main-app">
-      <h1 class="main-header">Resume Builder</h1>
-
       <div className="resume-builder">
         <PersonalDetailsSection 
           personalDetails={personalDetails}

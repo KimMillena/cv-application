@@ -9,7 +9,8 @@
 /* RESUME EXPERIENCE GROUP SIDE */
 
 .resume-experience-group {
-    display: flex;    
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* RESUME EXPERIENCE LEFT SIDE */

@@ -6,6 +6,14 @@
     gap: var(--lg-gap);
     background-color: var(--card-bg-color);
     box-shadow: 1px 6px 8px 1px rgba(0, 0, 0, 0.3);
-    padding: var(--lg-padding);
-    min-height: 50vh;
+    padding: var(--resume-padding);
+    width: 100%;
+    min-height: 100vh;
+}
+
+@media (min-width: 1024px) {
+    .resume {
+        width: 210mm;
+        min-height: 297mm;
+    }
 }

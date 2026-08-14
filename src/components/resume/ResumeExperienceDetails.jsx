@@ -5,7 +5,8 @@ function ResumeExperienceDetails({ experienceDetails }) {
     return (
         <div className="resume-experience-details">
             <h2 className="resume-experience-details-header">Experience</h2>
-            
+            <hr></hr>
+
             {experienceDetails.map(experience => (
                 <div className="resume-experience-group">
                     <div className="resume-experience-left">

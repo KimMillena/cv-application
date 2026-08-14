@@ -1,4 +1,7 @@
 .main-app {
+    display: flex;
+    flex-direction: column;
+    gap: var(--lg-gap);    
     background-color: var(--main-bg-color);
     padding: var(--lg-padding);
 }
@@ -12,4 +15,23 @@
     flex-direction: column;
     margin-bottom: var(--lg-margin);
     gap: var(--lg-gap);
+    width: 100%;
+    height: fit-content;
+}
+
+.resume-preview {
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    .main-app {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .resume-builder {
+        flex: 1;
+        max-width: 600px;
+    }
 }

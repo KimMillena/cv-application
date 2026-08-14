@@ -12,9 +12,10 @@
   --border-color: #e5e5e5;
   --card-bg-color: #ffffff;
 
-  --add-btn-bg: #024a70;
-  --remove-btn-bg: #fb2c36;
-  --button-padding: 0.75rem;
+  --add-btn-color: #00598a;
+  --add-btn-hover-color: #024a70;
+  --remove-btn-color: #fb2c36;
+  --remove-btn-hover-color: #e7000b;
 
   --sm-gap: 0.25rem;
   --md-gap: 0.5rem;
@@ -27,6 +28,8 @@
   --sm-padding: 0.25rem;
   --md-padding: 0.5rem;
   --lg-padding: 1rem;
+  --resume-padding: 2rem;
+  --button-padding: 0.75rem;
 
   --sm-border-radius: 0.25rem;
   --md-border-radius: 0.5rem;

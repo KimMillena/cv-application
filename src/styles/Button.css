@@ -10,13 +10,25 @@
 .add-education-btn,
 .add-experience-btn {
     color: white;
-    background-color: var(--add-btn-bg);
+    background-color: var(--add-btn-color);
     border: none;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.add-education-btn:hover,
+.add-experience-btn:hover {
+    background-color: var(--add-btn-hover-color);
 }
 
 .remove-education-btn,
 .remove-experience-btn {
     color: #fff;
-    background-color: var(--remove-btn-bg);
+    background-color: var(--remove-btn-color);
     border: none;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.remove-education-btn:hover,
+.remove-experience-btn:hover {
+    background-color: var(--remove-btn-hover-color);
 }
